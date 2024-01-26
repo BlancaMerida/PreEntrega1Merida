@@ -35,7 +35,7 @@
 //}
 
 //            SEGUNDA ENTREGA
-
+let seguir = "si";
 const productos =  [
     { id: 1, nombre: "cuaderno", precio: 1500 },
     { id: 2, nombre: "lapicera", precio: 850 },
@@ -43,6 +43,7 @@ const productos =  [
     { id: 4, nombre: "resaltador", precio: 1000 },
     { id: 5, nombre: "libros", precio: 900 },
 ];
+while(seguir.toLowerCase()!="no"){
 let nombre = prompt("Ingrese el nombre del producto a buscar");
 const producto = productos.find((item) => item.nombre === nombre);
 if (producto) { 
@@ -56,14 +57,5 @@ if (producto) {
 
 }
 
-const precio = Number(prompt("Ingrese el precio minimo del producto"));
-const filtra = productos.filter((item) => item.precio > precio);
-
-filtra.forEach((item) => {
-    alert(`
-    Id: ${item.id}
-    Nombre: ${item.nombre}
-    Precio:${item.precio}
-    `);
-});
-
+    seguir = prompt(`desea comprar? (si/ no)`)
+}
